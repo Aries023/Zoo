@@ -18,4 +18,8 @@ public abstract class Herbivoves {
     void died(boolean arg) {
         alive = arg;
     }
+
+    void noise(){
+        System.out.println(" defauld noise");
+    }
 }
