@@ -16,11 +16,15 @@ public abstract class Carnivores {
     boolean poisons = false;
     byte dominance = 1;
 
-    boolean kill() {
-        return false;
+    boolean kill(boolean arg, byte arg2) {
+        if (dominance > arg2){
+            return false;
+        }else {
+            return arg;
+        }
     }
 
-    void died() {
-
+    void died(boolean arg) {
+        alive = arg;
     }
 }
