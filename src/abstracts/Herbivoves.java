@@ -1,21 +1,21 @@
-package interfaces;
+package abstracts;
 
-  /*
-  this is interface of all carnivores
+ /*
+  this is interface of all herbivores
 
   - alive = represents if is animal alive or if it was eaten
   - poisons = If the animal has been eaten, it can poison its enemy
   - dominance = It is the ability to defend or attack.
 
-  - kill() = Attempted attack
   - died() = The animal died and was eaten.
    */
 
-public interface Carnivores {
-    boolean alevi = true;
+public abstract class Herbivoves {
+    boolean alive = true;
     boolean poisons = false;
-    byte dominance = 1;
+    byte dominance = 2;
 
-    boolean kill();
-    void died();
+    void died() {
+
+    }
 }
