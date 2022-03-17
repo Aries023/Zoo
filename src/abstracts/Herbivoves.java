@@ -15,7 +15,7 @@ public abstract class Herbivoves {
     boolean poisons = false;
     byte dominance = 2;
 
-    void died() {
-
+    void died(boolean arg) {
+        alive = arg;
     }
 }
