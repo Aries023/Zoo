@@ -5,7 +5,7 @@ package Streams;
  *
  * - method getStringInput serve for String imput
  * - method getIntInput serve for int input
- * - method close serve for close Scanner
+ * - method close serve as closer of Scanner
  */
 
 public class ScannerStream {
