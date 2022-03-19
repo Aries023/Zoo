@@ -1,6 +1,15 @@
 package stuffs;
 
+import Streams.ScannerStream;
+
 public class TextStream {
+   static ScannerStream sc = new ScannerStream();
+
+    public boolean createOrLoad(){
+        System.out.println("if you want load persons press 1, if you dont, then press whatever you want and create them.");
+        return sc.getIntInput() == 1;
+    }
+
     protected void intro(String name){
         System.out.println("Hello there, welcome to our zoo!");
         System.out.println(name + " has today shift. He will leads you.");
