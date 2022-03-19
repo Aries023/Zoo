@@ -11,6 +11,6 @@ public class TextStream {
 
     protected void whereToGo(){
         System.out.println("where you want to go? put a number..");
-        System.out.println("0 = monkey / 1 = tyger / 2 = lion / 3 = parrot / 4 = pufferfish");
+        System.out.println("0 = monkey / 1 = tyger / 2 = lion / 3 = parrot / 4 = pufferfish / other numbers will send you home..");
     }
 }
