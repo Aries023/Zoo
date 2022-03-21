@@ -1,5 +1,7 @@
 package Streams;
 
+import java.util.Scanner;
+
 /**
  * this class is serviced to receive input from the user
  *
@@ -9,20 +11,19 @@ package Streams;
  */
 
 public class ScannerStream {
-    java.util.Scanner scanner = new java.util.Scanner(System.in);
 
-    public String getStringImput (){
+    static public String getStringImput (Scanner sc){
         try {
-            scanner.nextLine();       // reset Scanner
-            return scanner.nextLine();
+            sc.nextLine();       // reset Scanner
+            return sc.nextLine();
         }catch (Exception e){
             e.getStackTrace();
             System.out.println("there is error, try it again :/");
         }
-        return getStringImput();
+        return getStringImput(sc);
     }
 
-    public int getIntInput (){
+    static public int getIntInput (Scanner scanner){
         try {
             scanner.nextInt();        // reset Scanner
             return scanner.nextInt();
@@ -30,10 +31,10 @@ public class ScannerStream {
             e.getStackTrace();
             System.out.println("you probably did not put number :/ try it again!");
         }
-        return getIntInput();
+        return getIntInput(scanner);
     }
 
-    public void close (){
+    static public void close (Scanner scanner){
         scanner.close();
     }
 }

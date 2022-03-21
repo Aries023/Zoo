@@ -2,15 +2,16 @@ package stuffs;
 
 import Streams.ScannerStream;
 
-public class TextStream {
-   static ScannerStream sc = new ScannerStream();
+import java.util.Scanner;
 
-    public boolean createOrLoad(){
+public class TextStream {
+
+    static public boolean createOrLoad(Scanner sc){
         System.out.println("if you want load persons press 1, if you dont, then press whatever you want and create them.");
-        return sc.getIntInput() == 1;
+        return ScannerStream.getIntInput(sc) == 1;
     }
 
-    protected void intro(String name){
+    static public void intro(String name){
         System.out.println("Hello there, welcome to our zoo!");
         System.out.println(name + " has today shift. He will leads you.");
         System.out.println(name + ": hello adventure, we have 5 cages.");
@@ -18,8 +19,9 @@ public class TextStream {
         System.out.println();
     }
 
-    protected void whereToGo(){
+    static public int whereToGo(Scanner sc){
         System.out.println("where you want to go? put a number..");
         System.out.println("0 = monkey / 1 = tyger / 2 = lion / 3 = parrot / 4 = pufferfish / other numbers will send you home..");
+        return ScannerStream.getIntInput(sc);
     }
 }
