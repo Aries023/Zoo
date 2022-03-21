@@ -23,6 +23,9 @@ public class ScannerStream {
         return getStringImput(sc);
     }
 
+    private ScannerStream() {
+    }
+
     static public int getIntInput (Scanner scanner){
         try {
             scanner.nextInt();        // reset Scanner
