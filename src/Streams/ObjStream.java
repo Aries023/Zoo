@@ -3,7 +3,9 @@ package Streams;
 import objects.Employee;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 /**
  * this is class for save and load data in txt document
@@ -32,4 +34,19 @@ public class ObjStream {
         }
         return employeesData;
     }
+
+    public static void saveData(Employee [] data){
+        try {
+            FileOutputStream outputStream = new FileOutputStream("data/data.txt");
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
+            objectOutputStream.writeObject(data);
+            objectOutputStream.close();
+            System.out.println("save data -> done!");
+        }catch (Exception e){
+            System.out.println("there is a error, data save failed!");
+            e.getStackTrace();
+        }
+
+    }
+
 }
