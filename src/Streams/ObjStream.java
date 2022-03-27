@@ -12,7 +12,7 @@ import java.io.ObjectInputStream;
 public class ObjStream {
 
     /**
-     * This is metod for load data from txt doc.
+     * This is method for load data from txt doc.
      * CARE !!! if someone delete data or somehow its happens that there is no data, there may come error! more in @return
      * @return it will return employee from loaded data (if data are empty = basically return 0 length object array!!)
      */
