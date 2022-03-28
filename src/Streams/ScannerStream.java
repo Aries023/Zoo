@@ -12,7 +12,9 @@ import java.util.Scanner;
 
 public class ScannerStream {
 
-    static public String getStringImput (Scanner sc){
+    static Scanner sc = new Scanner(System.in);
+
+    public String getStringImput (){
         try {
             sc.nextLine();       // reset Scanner
             return sc.nextLine();
@@ -20,21 +22,18 @@ public class ScannerStream {
             e.getStackTrace();
             System.out.println("there is error, try it again :/");
         }
-        return getStringImput(sc);
+        return getStringImput();
     }
 
-    private ScannerStream() {
-    }
-
-    static public int getIntInput (Scanner scanner){
+    public int getIntInput (){
         try {
-            scanner.nextInt();        // reset Scanner
-            return scanner.nextInt();
+            sc.nextInt();        // reset Scanner
+            return sc.nextInt();
         }catch (Exception e){
             e.getStackTrace();
             System.out.println("you probably did not put number :/ try it again!");
         }
-        return getIntInput(scanner);
+        return getIntInput();
     }
 
     static public void close (Scanner scanner){
