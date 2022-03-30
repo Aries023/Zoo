@@ -6,12 +6,12 @@ import java.util.Scanner;
 
 public class TextStream {
 
-    static public int loadOrNot (ScannerStream sc){
-        System.out.println("do you want load data? if yes write 1 and enter, whatever else means no..");
-        return sc.getIntInput();
+    static public boolean BasicEmployeeOrNot (ScannerStream sc){
+        System.out.println("do you want basic employee? if yes write 1 and enter, whatever else means no..");
+        return sc.getIntInput() == 1;
     }
 
-    static public boolean createOrLoad(ScannerStream sc){
+    static public boolean createEmployeeOrLoad(ScannerStream sc){
         System.out.println("if you want load persons press 1, if you dont, then press whatever you want and create them.");
         return sc.getIntInput() == 1;
     }
