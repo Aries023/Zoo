@@ -1,6 +1,7 @@
 package stuffs;
 
 import Streams.ScannerStream;
+import objects.Employee;
 
 import java.util.Scanner;
 
@@ -11,9 +12,17 @@ public class TextStream {
         return sc.getIntInput() == 1;
     }
 
-    static public boolean createEmployeeOrLoad(ScannerStream sc){
-        System.out.println("if you want load persons press 1, if you dont, then press whatever you want and create them.");
+    static public boolean addEmployeeOrNot(ScannerStream sc){
+        System.out.println("if you want create another employee press 1, if you dont, then press whatever you want and create them.");
         return sc.getIntInput() == 1;
+    }
+
+    static public Employee createEmployee(ScannerStream sc){
+        System.out.println("what is employee name?");
+        String name = sc.getStringImput();
+        System.out.println("how old " + name + " is?");
+        byte age = (byte) sc.getIntInput();
+        return new Employee(name,age);
     }
 
     static public void intro(String name){
